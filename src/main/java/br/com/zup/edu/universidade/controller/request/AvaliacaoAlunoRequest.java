@@ -8,6 +8,7 @@ import br.com.zup.edu.universidade.repository.AvaliacaoRepository;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.server.ResponseStatusException;
 
+import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Positive;
 import java.util.List;
@@ -19,7 +20,7 @@ import static org.springframework.http.HttpStatus.*;
 public class AvaliacaoAlunoRequest {
 
     @NotNull
-    private List<RespostaQuestaoRequest> respostas;
+    private List<@Valid RespostaQuestaoRequest> respostas;
 
     public AvaliacaoAlunoRequest(List<RespostaQuestaoRequest> respostas) {
 
